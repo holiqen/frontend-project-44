@@ -1,9 +1,6 @@
 import { getRandomNumber } from "../utils/getRandomNumber.js";
-import { askUserName } from "../utils/askUserName.js";
-import { playRounds } from "../utils/playRounds.js";
 import { findGCD } from "../utils/findGCD.js";
-
-const NUMBER_OF_ROUND = 3;
+import { startGame } from "../utils/startGame.js";
 
 const gameLogic = () => {
     const randomNumber1 = getRandomNumber(1, 100);
@@ -15,7 +12,8 @@ const gameLogic = () => {
 };
 
 export const startGcdGame = () => {
-    const userName = askUserName();
-    console.log("Find the greatest common divisor of given numbers.");
-    playRounds(userName, NUMBER_OF_ROUND, gameLogic);
+    startGame(
+        "Find the greatest common divisor of given numbers.",
+        gameLogic
+    );
 };

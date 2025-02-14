@@ -1,10 +1,7 @@
 import { getRandomNumber } from "../utils/getRandomNumber.js";
 import { getRandomOperator } from "../utils/getRandomOperator.js";
 import { calculate } from "../utils/calculate.js";
-import { askUserName } from "../utils/askUserName.js";
-import { playRounds } from "../utils/playRounds.js";
-
-const NUMBER_OF_ROUND = 3;
+import { startGame } from "../utils/startGame.js";
 
 const gameLogic = () => {
     const randomNumber1 = getRandomNumber();
@@ -23,7 +20,8 @@ const gameLogic = () => {
 };
 
 export const startCalcGame = () => {
-    const userName = askUserName();
-    console.log("What is the result of the expression?");
-    playRounds(userName, NUMBER_OF_ROUND, gameLogic);
+    startGame(
+        "What is the result of the expression?",
+        gameLogic
+    );
 };
