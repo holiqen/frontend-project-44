@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-export const playRounds = (userName, remainingRounds, gameLogic) => {
+const playRounds = (userName, remainingRounds, gameLogic) => {
   if (remainingRounds === 0) {
     console.log(`Congratulations, ${userName}!`);
     return;
@@ -12,9 +12,12 @@ export const playRounds = (userName, remainingRounds, gameLogic) => {
 
   if (userAnswer === correctAnswer) {
     console.log('Correct!');
-    return playRounds(userName, remainingRounds - 1, gameLogic);
+    playRounds(userName, remainingRounds - 1, gameLogic);
+    return;
   }
 
   console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
   console.log(`Let's try again, ${userName}!`);
 };
+
+export default playRounds;

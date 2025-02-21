@@ -1,7 +1,7 @@
-import { getRandomNumber } from '../utils/getRandomNumber.js';
-import { getRandomOperator } from '../utils/getRandomOperator.js';
-import { calculate } from '../utils/calculate.js';
-import { startGame } from '../utils/startGame.js';
+import getRandomNumber from '../utils/getRandomNumber.js';
+import getRandomOperator from '../utils/getRandomOperator.js';
+import calculate from '../utils/calculate.js';
+import startGame from '../utils/startGame.js';
 
 const gameLogic = () => {
   const randomNumber1 = getRandomNumber();
@@ -19,9 +19,11 @@ const gameLogic = () => {
   return { question, correctAnswer: result.toString() };
 };
 
-export const startCalcGame = () => {
+const startCalcGame = () => {
   startGame(
     'What is the result of the expression?',
     gameLogic,
   );
 };
+
+export default startCalcGame;

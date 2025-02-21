@@ -1,6 +1,6 @@
-import { getRandomNumber } from '../utils/getRandomNumber.js';
-import { isEven } from '../utils/isEven.js';
-import { startGame } from '../utils/startGame.js';
+import getRandomNumber from '../utils/getRandomNumber.js';
+import isEven from '../utils/isEven.js';
+import startGame from '../utils/startGame.js';
 
 const gameLogic = () => {
   const randomNumber = getRandomNumber();
@@ -10,9 +10,11 @@ const gameLogic = () => {
   return { question, correctAnswer };
 };
 
-export const startEvenGame = () => {
+const startEvenGame = () => {
   startGame(
     'Answer "yes" if the number is even, otherwise answer "no".',
     gameLogic,
   );
 };
+
+export default startEvenGame;

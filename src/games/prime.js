@@ -1,6 +1,6 @@
-import { getRandomNumber } from '../utils/getRandomNumber.js';
-import { isPrime } from '../utils/isPrime.js';
-import { startGame } from '../utils/startGame.js';
+import getRandomNumber from '../utils/getRandomNumber.js';
+import isPrime from '../utils/isPrime.js';
+import startGame from '../utils/startGame.js';
 
 const gameLogic = () => {
   const randomNumber = getRandomNumber(1, 100);
@@ -12,9 +12,11 @@ const gameLogic = () => {
   };
 };
 
-export const startPrimeGame = () => {
+const startPrimeGame = () => {
   startGame(
     'Answer "yes" if given number is prime. Otherwise answer "no".',
     gameLogic,
   );
 };
+
+export default startPrimeGame;
