@@ -21,6 +21,7 @@ export default [
       'implicit-arrow-linebreak': ['error', 'beside'],
       'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 0 }],
       'consistent-return': 'error',
+      'max-len': ['error', { code: 100, tabWidth: 2, ignoreUrls: true }],
     },
   },
 ];

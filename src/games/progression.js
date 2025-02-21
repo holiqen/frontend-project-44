@@ -7,7 +7,9 @@ const gameLogic = () => {
   const hiddenIndex = getRandomNumber(0, progression.length - 1);
   const correctAnswer = progression[hiddenIndex].toString();
 
-  const questionProgression = progression.map((num, index) => (index === hiddenIndex ? '..' : num)).join(' ');
+  const questionProgression = progression
+    .map((num, index) => (index === hiddenIndex ? '..' : num))
+    .join(' ');
 
   return {
     question: `${questionProgression}`,
