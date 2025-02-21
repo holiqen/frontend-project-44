@@ -1,8 +1,8 @@
-import { getRandomNumber } from "./getRandomNumber.js";
+import { getRandomNumber } from './getRandomNumber.js';
 
-const OPERATORS = ["+", "-", "*"];
+const OPERATORS = ['+', '-', '*'];
 
 export const getRandomOperator = () => {
-    const index = getRandomNumber(0, OPERATORS.length - 1);
-    return OPERATORS[index];
+  const index = getRandomNumber(0, OPERATORS.length - 1);
+  return OPERATORS[index];
 };
